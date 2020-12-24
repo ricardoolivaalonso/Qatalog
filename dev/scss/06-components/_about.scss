@@ -1,0 +1,70 @@
+.about{
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 230px;
+        max-width: 192px;
+        width: 100%;
+        overflow: hidden;
+
+        box-shadow:
+            rgba(0, 0, 0, 0.12) 0px -2px 2px inset,
+            rgba(0, 0, 0, 0.2) 0px -1px 4px inset
+        ;
+        border-radius: 16px;
+        cursor: pointer;
+
+        &:hover{
+            box-shadow:
+                rgba(0, 0, 0, 0.035) 0px 2px 2px,
+                rgba(0, 0, 0, 0.035) 0px 4px 4px,
+                rgba(0, 0, 0, 0.035) 0px 8px 8px,
+                rgba(0, 0, 0, 0.035) 0px 16px 16px,
+                rgba(0, 0, 0, 0.035) 0px 32px 32px,
+                rgba(0, 0, 0, 0.035) 0px 64px 64px
+            ;
+        }
+
+        @media(max-width: $mq2){
+            max-width: 100%;
+            height: 280px;
+        }
+        @media(max-width: $mq4){
+            margin: 0 auto;
+            max-width: 80%;
+        }
+    }
+        &__img{
+            height: 72px;
+            object-fit: contain;
+            margin-bottom: 12px;
+
+            @media(max-width: $mq1){ height: 60px;}
+            @media(max-width: $mq2){ height: 72px; }
+            @media(max-width: $mq3){ height: 60px; }
+            @media(max-width: $mq4){ height: 72px; }
+        }
+        &__title{
+            @include f24();
+            color: $black-2;
+            margin-bottom: 16px;
+        }
+        &__description{
+            @include f14();
+            color: $gray-3;
+            max-width: 80%;
+            margin-bottom: 16px;
+            text-align: center;
+            display: none;
+
+            @media(max-width: $mq2){ display: inherit; }
+        }
+        &__link{
+            @include f14-link();
+            i{ margin-left: 16px; }
+        }
+
+}

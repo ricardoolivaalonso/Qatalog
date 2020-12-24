@@ -1,0 +1,28 @@
+/* Colors */
+$white-1: #ffffff;
+$black-1: #292929;
+$black-2: #424242;
+$gray-0: #f4f4f4;
+$gray-1: #e4e4e6 ;
+$gray-2: #686c73;
+$gray-3: #757575;
+$purple-1: #0066ff;
+$purple-2: #1838d5;
+$blue-1: #0066ff;
+/* Size */
+$mq0: 1200px;
+$mq1: 980px;
+$mq2: 900px;
+$mq3: 640px;
+$mq4: 560px;
+
+:root{
+    --max-width: 1200px;
+    --gap-h: 40px;
+    --gap-v: 24px;
+
+    @media(max-width: $mq1){ --gap-h: 20px; }
+    @media(max-width: $mq4){ --gap-v: 16px; }
+}
+/**/
+$transition: 200ms;

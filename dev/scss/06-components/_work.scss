@@ -1,0 +1,41 @@
+.work{
+    &__info{
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+        &__title{
+            @include f62();
+            margin-bottom: 40px;
+            color: $black-1;
+
+            &::first-letter{ text-transform: capitalize; }
+
+            @media(max-width: $mq4){ font-size: 32px;}
+        }
+        &__link{
+            @include link();
+            @include link-shadow();
+            padding: 16px 24px;
+            font-size: 15px;
+            border-radius: 12px;
+
+            &::first-letter{ text-transform: capitalize; }
+        }
+    &__video-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 392px;
+        width: 100%;
+        height: 100%;
+
+        @media(max-width: $mq3){ max-width: 100%; }
+    }
+        &__video{
+            width: 100%;
+            max-width: 100%;
+
+            @media(max-width: $mq3){ margin-top: 70px; }
+        }
+}

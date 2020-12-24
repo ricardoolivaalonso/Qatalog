@@ -1,0 +1,47 @@
+.ssl{
+    &__info{
+        max-width: 50%;
+        padding-left: 100px;
+
+        @media(max-width: $mq1){ padding-left: 50px; }
+        @media(max-width: $mq2){
+            max-width: 45%;
+            padding-left: 0;
+        }
+        @media(max-width: $mq3){
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+        &__title{
+            @include f46();
+            color: $black-1;
+            margin-bottom: 10px;
+
+            @media(max-width: $mq3){ margin-bottom: 40px; }
+        }
+        &__description{
+            @include f16();
+            color: $gray-3;
+        }
+    &__video-container{
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        @media(max-width: $mq3){
+            max-height: 400px;
+            overflow: hidden;
+        }
+        @media(max-width: $mq4){ max-height: 300px; }
+    }
+        &__video{
+            position: absolute;
+            top: -80px;
+            width: 100%;
+            max-width: 100%;
+
+            @media(max-width: $mq2){ top: -50px; }
+            @media(max-width: $mq3){ position: relative; }
+        }
+}

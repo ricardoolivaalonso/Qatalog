@@ -1,0 +1,132 @@
+.slider{
+    &__images{
+        width: 100%;
+        max-width: 680px;
+        margin-right: 96px;
+        margin-left: -40px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        @media(max-width: $mq0){
+            max-width: 600px;
+            margin-right: 60px;
+        }
+        @media(max-width: $mq1){
+            max-width: 560px;
+            margin-right: 40px;
+        }
+        @media(max-width: $mq2){
+            display: flex;
+            justify-content: center;
+            top: 200px;
+            max-width: 100%;
+            height: 100%;
+            min-height: 350px;
+            margin: 0;
+        }
+    }
+        &__image{
+            width: 100%;
+            max-width: 680px;
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: 400ms;
+
+            @media(max-width: $mq0){ max-width: 600px; }
+            @media(max-width: $mq1){ max-width: 560px; }
+        }
+    &__controls{
+
+    }
+        &__item{
+            display: flex;
+
+            @media(max-width: $mq2){
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                position: absolute;
+                opacity: 0;
+                width: 100%;
+                visibility: hidden;
+                top: 0;
+            }
+            &-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 48px;
+                height: 48px;
+                flex-shrink: 0;
+                position: relative;
+
+                background-color: $gray-0;
+                border-radius: 12px;
+                box-shadow:
+                    darken($gray-1, 10) 0px 1px 1px,
+                    $gray-0 0px 2px 2px,
+                    $gray-0 0px 4px 4px,
+                    $gray-0 0px 8px 8px,
+                    $gray-0 0px 16px 16px,
+                    $gray-0 0px 32px 32px,
+                    $gray-0 0px 64px 64px,
+                ;
+                transition: 400ms;
+            }
+                &-icon{
+                    color: $purple-2;
+                }
+                &-linec{
+                    position: absolute;
+                    bottom: -65px;
+                    width: 6px;
+                    height: 45px;
+                    border-radius: 12px;
+                    background-color: $gray-0;
+                    overflow: hidden;
+
+                    @media(max-width: $mq2){ display: none; }
+                }
+                    &-line{
+                        position: absolute;
+                        top: -100%;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $purple-2;
+                    }
+
+            &-info{
+                margin-left: var(--gap-h);
+                margin-bottom: var(--gap-h);
+                max-width: 338px;
+
+                @media(max-width: $mq2){
+                    max-width: 100%;
+                    margin-top: 40px;
+                    text-align: center;
+                }
+            }
+                &-title{
+                    @include f24();
+                    color: $black-1;
+
+                    @media(max-width: $mq2){
+                        position: relative;
+                        z-index: 10;
+                    }
+                }
+                &-description{
+                    @include f14();
+                    line-height: 32px;
+                    font-weight: 400;
+                    color: $gray-3;
+
+                    @media(max-width: $mq2){
+                        position: relative;
+                        z-index: 10;
+                    }
+                }
+        }
+}

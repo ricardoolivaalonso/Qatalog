@@ -1,0 +1,42 @@
+.is-image-visible{
+    visibility: visible;
+    opacity: 1;
+    transition: 400ms;
+}
+.is-icon-selected{
+    @include link-shadow();
+    background-color: $purple-2;
+    transition: 400ms;
+
+    i{ color: $white-1; }
+
+    @media(max-width: $mq2){
+        background-color: $gray-0;
+        box-shadow:
+            darken($gray-1, 10) 0px 1px 1px,
+            $gray-0 0px 2px 2px,
+            $gray-0 0px 4px 4px,
+            $gray-0 0px 8px 8px,
+            $gray-0 0px 16px 16px,
+            $gray-0 0px 32px 32px,
+            $gray-0 0px 64px 64px,
+        ;
+        i{ color: $purple-2; }
+    }
+}
+.is-line-selected{
+    animation: is-line-selected 4400ms linear;
+}
+.is-element-hidden{ display: none; }
+
+
+.is-item-selected{
+    @media(max-width: $mq2){
+        visibility: visible;
+        opacity: 1;
+        transition: 400ms;
+    }
+}
+/**************/
+/**************/
+@keyframes is-line-selected {98%{ top: 0%; }}

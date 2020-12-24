@@ -1,0 +1,76 @@
+.hero{
+    &__info{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        max-width: 560px;
+        width: 100%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        @media(max-width: $mq2){ max-width: 400px; }
+        @media(max-width: $mq3){
+            top: 40px;
+            max-width: 80%;
+            margin: 0 10%;
+            transform: translateY(0);
+            text-align: center;
+        }
+        @media(max-width: $mq4){
+            max-width: 90%;
+            margin: 0 5%;
+        }
+    }
+        &__title{
+            @include f62();
+            margin-bottom: var(--gap-v);
+            color: $black-1;
+
+            &::first-letter{ text-transform: capitalize; }
+        }
+        &__description{
+            @include f26();
+            color: $black-2;
+            margin: 24px 0 60px;
+
+            &::first-letter{ text-transform: capitalize; }
+
+            @media(max-width: $mq4){ margin: 10px 0 40px; }
+        }
+        &__link{
+            @include link();
+            @include link-shadow();
+            padding: 16px 24px;
+            font-size: 14px;
+            border-radius: 12px;
+
+            &::first-letter{ text-transform: capitalize; }
+        }
+    &__video-container{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: -200px;
+        max-width: 1000px;
+        width: 100%;
+        height: 100%;
+
+        @media(max-width: $mq1){ max-width: 800px; }
+        @media(max-width: $mq2){ max-width: 700px; }
+        @media(max-width: $mq3){
+            max-width: 100%;
+            top: 110px;
+            right: 0;
+        }
+    }
+        &__video{
+            width: 100%;
+            max-width: 100%;
+
+            @media(max-width: $mq3){
+                max-width: 180%;
+                width: 180%;
+            }
+        }
+}
